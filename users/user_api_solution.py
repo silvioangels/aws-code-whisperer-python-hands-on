@@ -3,7 +3,7 @@ import boto3
 import json
 
 QUEUE_URL = os.getenv("QUEUE_URL", default="test")
-sqs = boto3.client('sqs')
+sqs = boto3.client('sqs', region_name='us-east-1')
 
 
 # Function to send the message to SQS

@@ -4,7 +4,7 @@ import json
 from boto3.dynamodb.conditions import Key
 
 TABLE_NAME = os.getenv("TABLE_NAME", default="products")
-ddb = boto3.client('dynamodb')
+ddb = boto3.client('dynamodb', region_name='us-east-1')
 
 
 # Function to query products table 

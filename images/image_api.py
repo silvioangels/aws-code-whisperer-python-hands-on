@@ -4,7 +4,7 @@ import json
 import base64
 
 BUCKET_NAME = os.getenv("BUCKET_NAME", default="mybucket")
-s3 = boto3.client('s3')
+s3 = boto3.client('s3', region_name='us-east-1')
 
 
 # Upload the image to S3
